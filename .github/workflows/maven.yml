@@ -23,7 +23,8 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      working-directory: ./my-app
+      run: mvn -B package
 
     - name: Run the Maven verify phase
       run: mvn --batch-mode --update-snapshots verify
