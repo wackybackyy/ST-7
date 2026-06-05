@@ -26,4 +26,4 @@ jobs:
 
       - name: Build with Maven
         working-directory: ./my-app
-        run: mvn -B package
+        run: mvn -U -B package
